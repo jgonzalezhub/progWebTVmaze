@@ -1,0 +1,71 @@
+.lista-favoritos {
+  padding: 2rem;
+  text-align: center;
+}
+
+.lista-favoritos h2 {
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+/* Contenedor grid */
+.contenedor-favoritos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Tarjeta de cada favorito */
+.favorito-item {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.favorito-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen */
+.favorito-item img {
+  width: 100%;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+/* Nombre */
+.favorito-item h3 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+/* Botón */
+.favorito-item button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.favorito-item button:hover {
+  background-color: #b02a37;
+}
+
+.favorito-item button:active {
+  transform: scale(0.97);
+}
+
+/* Mensaje cuando no hay favoritos */
+.lista-favoritos > p {
+  color: #666;
+  font-style: italic;
+}
