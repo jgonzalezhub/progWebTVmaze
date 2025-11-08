@@ -2,7 +2,6 @@
  Muestra todas las series guardadas como favoritas.
  */
 
-import "./ListaDeSeriesFav.css";
 
  export default function ListaDeSeriesFav({ favoritos, onSeleccionarSerie, onAlternarFavorito }) {
   if (!favoritos || favoritos.length === 0) {
@@ -30,7 +29,7 @@ import "./ListaDeSeriesFav.css";
             {serie.name && <h3>{serie.name}</h3>}
 
             {/* Botón para quitar de favoritos */}
-            <button onClick={() => onAlternarFavorito(serie)}>Eliminar de favoritos</button>
+            <button onClick={() => onAlternarFavorito(serie)}>Quitar</button>
           </div>
         ))}
       </div>

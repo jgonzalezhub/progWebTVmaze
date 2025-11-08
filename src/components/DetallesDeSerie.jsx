@@ -1,10 +1,6 @@
 /*
-Muestra la información completa de una serie específica seleccionada por el usuario desde la lista.
-Incluye descripción, género, fecha, calificación, etc.
-
+  Muestra los detalles completos de una serie en un modal.
  */
-import "./DetallesDeSerie.css";
-
 
 export default function DetallesDeSerie({ serie, onCerrar, onAlternarFavorito, esFavorita }) {
   if (!serie) return null;
@@ -44,7 +40,7 @@ export default function DetallesDeSerie({ serie, onCerrar, onAlternarFavorito, e
 
         {/* Botón de favorito dentro del modal */}
         <button onClick={() => onAlternarFavorito(serie)}>
-          {esFavorita ? "Quitar de favoritos" : "Añadir a favoritos"}
+          {esFavorita ? "★ Quitar de favoritos" : "☆ Añadir a favoritos"}
         </button>
       </div>
     </div>
