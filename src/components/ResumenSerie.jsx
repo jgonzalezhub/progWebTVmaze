@@ -2,6 +2,7 @@
     Muestra una tarjeta con el resumen de una serie.
     Al hacer clic en la imagen muestra los detalles.
  */
+import "./ResumenSerie.css";
 
 export default function ResumenSerie({ serie, onSeleccionarSerie, onAlternarFavorito, esFavorito }) {
   if (!serie) return null; // Si no hay datos de la serie, no se muestra nada

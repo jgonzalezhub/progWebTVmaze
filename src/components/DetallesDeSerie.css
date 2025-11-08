@@ -1,0 +1,105 @@
+/* Fondo del modal */
+.modal-detalles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+/* Contenedor principal del modal */
+.modal-contenido {
+  background: #fff;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow-y: auto;
+  max-height: 90vh;
+  animation: aparecer 0.25s ease-out;
+}
+
+/* Animación suave de entrada */
+@keyframes aparecer {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Botón de cierre */
+.cerrar {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.3s;
+}
+.cerrar:hover {
+  color: #000;
+}
+
+/* Imagen */
+.modal-contenido img {
+  display: block;
+  margin: 1rem auto;
+  border-radius: 0.75rem;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Descripción */
+.descripcion {
+  color: #444;
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+
+/* Texto general */
+.modal-contenido h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #222;
+}
+
+.modal-contenido p {
+  margin: 0.5rem 0;
+}
+
+/* Botón de favorito */
+.modal-contenido button:not(.cerrar) {
+  display: block;
+  margin: 1rem auto 0;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.modal-contenido button:not(.cerrar):hover {
+  background-color: #0056d2;
+}
+
+.modal-contenido button:not(.cerrar):active {
+  transform: scale(0.97);
+}

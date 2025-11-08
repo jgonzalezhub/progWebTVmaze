@@ -1,0 +1,106 @@
+/* ===== COMPONENTE APP PRINCIPAL ===== */
+.app {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--gradient-hero);
+}
+
+/* ===== HEADER PRINCIPAL CON GLASS MORPHISM ===== */
+.app-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: var(--blur-bg);
+  padding: var(--space-md) var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.app-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: var(--gradient-hero);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  margin-bottom: var(--space-sm);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  letter-spacing: -0.5px;
+}
+
+/* ===== CONTENEDOR PRINCIPAL RESPONSIVE ===== */
+.app-main {
+  flex: 1;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+/* ===== SECCIONES DE CONTENIDO ===== */
+.content-section {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: var(--blur-bg);
+  border-radius: 20px;
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+/* ===== ESTADOS DE CARGA Y ERROR ===== */
+.loading-state {
+  text-align: center;
+  padding: var(--space-xl);
+  color: var(--neutral-white);
+  font-size: 1.2rem;
+}
+
+.error-state {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #dc2626;
+  padding: var(--space-md);
+  border-radius: 12px;
+  text-align: center;
+  margin: var(--space-md) 0;
+  backdrop-filter: var(--blur-bg);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .app-header {
+    padding: var(--space-sm);
+  }
+  
+  .app-title {
+    font-size: 2rem;
+  }
+  
+  .app-main {
+    padding: var(--space-sm);
+  }
+  
+  .content-section {
+    padding: var(--space-md);
+    margin-bottom: var(--space-md);
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
